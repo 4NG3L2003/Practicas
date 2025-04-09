@@ -1,0 +1,108 @@
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas:
+        "header"
+        "sidebar"
+        "main"
+        "footer";
+    grid-template-columns: 1fr;
+    /* Una sola columna */
+    grid-template-rows: 50px auto 1fr 40px;
+    /* Ajusta las alturas */
+    height: 100vh;
+    /* Altura total de la ventana */
+}
+
+header {
+    grid-area: header;
+    background-color: lightblue;
+    color: black;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.5em;
+    border-color: black;
+    border-style: solid;
+    font-weight: bolder;
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-color: black;
+    border-style: solid;
+    height: auto;
+    /* Permite que ocupe todo el espacio disponible */
+}
+
+main {
+    grid-area: main;
+    background-color: #a2baca;
+    padding: 20px;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    text-align: center; /* Centra el texto dentro del contenido */
+    color: rgb(3, 3, 3);
+    font-weight: bolder;
+    text-decoration: underline;
+  }
+
+footer {
+    grid-area: footer;
+    background-color: #1f85ad;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: bolder;
+}
+
+iframe {
+    width: 75%;
+    height: 600px;
+}
+
+aside {
+    grid-area: sidebar;
+    background-color: antiquewhite;
+    padding: 20px;
+    border-color: black;
+    border-style: solid;
+    height: auto;
+    /* Permite que ocupe todo el espacio disponible */
+    display: flex;
+    /* Habilita el uso de flexbox */
+    flex-direction: column;
+    /* Alinea los elementos en columna */
+    align-items: center;
+    /* Centra horizontalmente los botones */
+}
+
+aside a {
+    display: block;
+    margin-bottom: 10px;
+    color: white;
+    text-decoration: none;
+    cursor: pointer;
+    border: black solid 2px;
+    /* Reduce el grosor del borde */
+    text-align: center;
+    border-radius: 20%;
+    /* Ajusta el redondeo */
+    background-color: grey;
+    padding: 10px  ;
+    width: 20%;
+    /* Ajusta el ancho del botón */
+}
+
+aside a:hover {
+    text-decoration: none;
+    background-color: #e0e0e0;
+    color: black;
+}
